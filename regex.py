@@ -150,91 +150,91 @@ import re
 # print(words)
 
 # # 26. Replace "cat" with "dog".
-# pattern = r""
+# pattern = r"cat"
 # text = "The cat sat on the mat."
 # new_text = re.sub(pattern, "dog", text)
 # print(new_text)
 
 # # 27. Match "color" or "colour" without capturing the group.
-# pattern = r""
+# pattern = r"colou?r"
 # text = "Both color and colour are correct."
 # matches = re.findall(pattern, text)
 # print(matches)
 
 # # 28. Match "John" only if followed by "Smith".
-# pattern = r""
+# pattern = r"John(?=\sSmith)"
 # text = "John Smith vs. John Doe"
 # matches = re.findall(pattern, text)
 # print(matches)
 
 # # 29. Match "Smith" only if preceded by "John".
-# pattern = r""
+# pattern = r"(?<=John\s)Smith"
 # text = "John Smith vs. John Doe"
 # matches = re.findall(pattern, text)
 # print(matches)
 
 # # 30. Match any Unicode letter.
-# pattern = r""
+# pattern = r"\w+", re.UNICODE
 # text = "Résumé"
 # matches = re.findall(pattern, text, re.UNICODE)
 # print(matches)
 
 # # 31. Match hexadecimal numbers (e.g., #a3c113).
-# pattern = r""
+# pattern = r"#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})"
 # text = "The color code is #a3c113."
 # matches = re.findall(pattern, text)
 # print(matches)
 
 # # 32. Match words containing 'ing'.
-# pattern = r""
+# pattern = r"\b\w*ing\b"
 # text = "Playing, singing, and swimming are fun."
 # matches = re.findall(pattern, text)
 # print(matches)
 
 # # 33. Match sentences ending with a question mark.
-# pattern = r""
+# pattern = r".*\?$"
 # text = "What is your name? How old are you?"
 # matches = re.findall(pattern, text)
 # print(matches)
 
 # # 34. Match all words starting with 's' and ending with 'e'.
-# pattern = r""
+# pattern = r"\bs\w*e\b"
 # text = "Store and sell are similar words."
 # matches = re.findall(pattern, text)
 # print(matches)
 
 # # 35. Match all HTML tags.
-# pattern = r""
+# pattern = r"<[^>]+>"
 # text = "<html><head><title>Title</title></head></html>"
 # matches = re.findall(pattern, text)
 # print(matches)
 
 # # 36. Match all Twitter handles (e.g., @username).
-# pattern = r""
+# pattern = r"@\w+"
 # text = "Follow me on Twitter @example_user."
 # matches = re.findall(pattern, text)
 # print(matches)
 
 # # 37. Match dates in the format YYYY-MM-DD.
-# pattern = r""
+# pattern = r"\d{4}-\d{2}-\d{2}"
 # text = "Today's date is 2023-01-01."
 # matches = re.findall(pattern, text)
 # print(matches)
 
 # # 38. Match all words longer than 5 letters.
-# pattern = r""
+# pattern = r"\b\w{6,}\b"
 # text = "Regular expressions are powerful."
 # matches = re.findall(pattern, text)
 # print(matches)
 
 # # 39. Match all floating-point numbers.
-# pattern = r""
+# pattern = r"-?\d+\.?\d*"
 # text = "The temperature is -3.14 degrees."
 # matches = re.findall(pattern, text)
 # print(matches)
 
-# # 40. Match all XML tags.
-# pattern = r""
-# text = "<note><to>User</to><from>Admin</from></note>"
-# matches = re.findall(pattern, text)
+# 40. Match all XML tags.
+pattern = r"<[^/>]+>"
+text = "<note><to>User</to><from>Admin</from></note>"
+matches = re.findall(pattern, text)
 
